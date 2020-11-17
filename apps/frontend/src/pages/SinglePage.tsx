@@ -1,26 +1,13 @@
-import { Typography, Container, Box } from '@material-ui/core';
+import { Container } from '@material-ui/core';
+import Is from '../components/Is';
 import React from 'react';
+import Header from '../components/Header';
 const Home = () => {
   return (
     <div>
+      <Header />
       <Container maxWidth="md">
-        <Box display="flex">
-          <Typography variant="h3" color="textPrimary">
-            raksit
-          </Typography>
-          <Typography variant="h3" color="secondary">
-            .is()
-          </Typography>
-        </Box>
-        <Box my={1}>
-          <Typography variant="h5" color="secondary">
-            Raksit Nongbua
-          </Typography>
-        </Box>
-        <Typography variant="h6" color="textSecondary">
-          Web Developer ,
-          <br /> Game Developer.
-        </Typography>
+        <Is />
       </Container>
     </div>
   );

@@ -2,27 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {
-  createMuiTheme,
-  CssBaseline,
-  MuiThemeProvider,
-} from '@material-ui/core';
-const themeDark = createMuiTheme({
-  palette: {
-    background: {
-      default: '#1B1B1B',
-    },
-    text: {
-      primary: '#ffffff',
-      secondary: '#5B5B5B',
-    },
-  },
-  typography: {
-    fontFamily: ['Inconsolata', 'cursive'].join(','),
-  },
-});
+import { CssBaseline, MuiThemeProvider } from '@material-ui/core';
+import { theme } from './services/theme';
+
 ReactDOM.render(
-  <MuiThemeProvider theme={themeDark}>
+  <MuiThemeProvider theme={theme}>
     <CssBaseline />
     <App />
   </MuiThemeProvider>,
