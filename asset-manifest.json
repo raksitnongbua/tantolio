@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/tantolio/static/js/main.6adb41b6.chunk.js",
-    "main.js.map": "/tantolio/static/js/main.6adb41b6.chunk.js.map",
+    "main.js": "/tantolio/static/js/main.938ca679.chunk.js",
+    "main.js.map": "/tantolio/static/js/main.938ca679.chunk.js.map",
     "runtime-main.js": "/tantolio/static/js/runtime-main.a6c96213.js",
     "runtime-main.js.map": "/tantolio/static/js/runtime-main.a6c96213.js.map",
     "static/js/2.d3620017.chunk.js": "/tantolio/static/js/2.d3620017.chunk.js",
@@ -14,6 +14,6 @@
   "entrypoints": [
     "static/js/runtime-main.a6c96213.js",
     "static/js/2.d3620017.chunk.js",
-    "static/js/main.6adb41b6.chunk.js"
+    "static/js/main.938ca679.chunk.js"
   ]
 }
