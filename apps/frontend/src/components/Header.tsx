@@ -73,7 +73,7 @@ const Header = () => {
         width="100%"
         display="flex"
         justifyContent="flex-end"
-        mx={1}
+        p={1}
       >
         <Button variant="text" className={button} disabled disableRipple>
           .is()
