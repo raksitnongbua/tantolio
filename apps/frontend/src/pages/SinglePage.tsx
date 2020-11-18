@@ -12,7 +12,7 @@ const Home = () => {
       <Container maxWidth="lg">
         <Grid container>
           <Grid item xs={1}>
-            <Box position="fixed" height="-webkit-fill-available" py={2}>
+            <Box position="fixed" py={2}>
               <img
                 alt="line"
                 src={`${process.env.PUBLIC_URL}/images/line.png`}
