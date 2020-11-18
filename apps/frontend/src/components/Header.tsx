@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Button, IconButton, Theme } from '@material-ui/core';
-import Particles from 'react-particles-js';
+import Particles, { IParticlesParams } from 'react-particles-js';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -16,12 +16,58 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   particles: {
     position: 'fixed',
+    width: '100%',
+    height: '100%',
   },
 }));
 const Header = () => {
   const { button, particles } = useStyles();
+  const particlesParams: IParticlesParams = {
+    particles: {
+      number: {
+        value: 50,
+        density: {
+          enable: true,
+          value_area: 1500,
+        },
+      },
+      line_linked: {
+        enable: true,
+        opacity: 0.02,
+      },
+      move: {
+        direction: 'right',
+        speed: 0.05,
+      },
+      size: {
+        value: 1,
+      },
+      opacity: {
+        anim: {
+          enable: true,
+          speed: 1,
+          opacity_min: 0.05,
+        },
+      },
+    },
+    interactivity: {
+      events: {
+        onclick: {
+          enable: true,
+          mode: 'push',
+        },
+      },
+      modes: {
+        push: {
+          particles_nb: 1,
+        },
+      },
+    },
+    retina_detect: true,
+  };
   return (
     <div>
+      <Particles className={particles} params={particlesParams} />
       <Box
         position="fixed"
         width="100%"
@@ -58,52 +104,6 @@ const Header = () => {
           />
         </IconButton>
       </Box>
-      <Particles
-        className={particles}
-        params={{
-          particles: {
-            number: {
-              value: 50,
-              density: {
-                enable: true,
-                value_area: 1500,
-              },
-            },
-            line_linked: {
-              enable: true,
-              opacity: 0.02,
-            },
-            move: {
-              direction: 'right',
-              speed: 0.05,
-            },
-            size: {
-              value: 1,
-            },
-            opacity: {
-              anim: {
-                enable: true,
-                speed: 1,
-                opacity_min: 0.05,
-              },
-            },
-          },
-          interactivity: {
-            events: {
-              onclick: {
-                enable: true,
-                mode: 'push',
-              },
-            },
-            modes: {
-              push: {
-                particles_nb: 1,
-              },
-            },
-          },
-          retina_detect: true,
-        }}
-      />
       <Box minHeight="400px"></Box>
     </div>
   );
