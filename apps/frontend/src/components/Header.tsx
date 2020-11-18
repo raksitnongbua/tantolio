@@ -104,7 +104,6 @@ const Header = () => {
           />
         </IconButton>
       </Box>
-      <Box minHeight="400px"></Box>
     </div>
   );
 };
