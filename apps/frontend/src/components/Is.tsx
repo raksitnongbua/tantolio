@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Typography } from '@material-ui/core';
+import { Bounce } from 'react-reveal';
 const Is = () => {
   return (
     <Box
@@ -9,23 +10,25 @@ const Is = () => {
       justifyContent="center"
     >
       <Box>
-        <Box display="flex">
-          <Typography variant="h3" color="textPrimary">
-            raksit
+        <Bounce right>
+          <Box display="flex">
+            <Typography variant="h3" color="textPrimary">
+              raksit
+            </Typography>
+            <Typography variant="h3" color="secondary">
+              .is()
+            </Typography>
+          </Box>
+          <Box my={1}>
+            <Typography variant="h5" color="secondary">
+              Raksit Nongbua
+            </Typography>
+          </Box>
+          <Typography variant="h6" color="textSecondary">
+            Web Developer ,
+            <br /> Game Developer.
           </Typography>
-          <Typography variant="h3" color="secondary">
-            .is()
-          </Typography>
-        </Box>
-        <Box my={1}>
-          <Typography variant="h5" color="secondary">
-            Raksit Nongbua
-          </Typography>
-        </Box>
-        <Typography variant="h6" color="textSecondary">
-          Web Developer ,
-          <br /> Game Developer.
-        </Typography>
+        </Bounce>
       </Box>
     </Box>
   );

@@ -92,6 +92,7 @@ const Header: React.FC<IProps> = ({ elementVisible }) => {
       >
         {menus.map((key) => (
           <Link
+            key={`link-${key}`}
             to={key}
             className={link}
             spy={true}
