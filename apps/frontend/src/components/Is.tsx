@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Typography } from '@material-ui/core';
-import { Bounce } from 'react-reveal';
+import ScrollAnimation from 'react-animate-on-scroll';
+
 const Is = () => {
   return (
     <Box
@@ -10,7 +11,7 @@ const Is = () => {
       justifyContent="center"
     >
       <Box>
-        <Bounce right>
+        <ScrollAnimation animateIn="bounceInRight" animateOut="bounceOutLeft">
           <Box display="flex">
             <Typography variant="h3" color="textPrimary">
               raksit
@@ -28,7 +29,7 @@ const Is = () => {
             Web Developer ,
             <br /> Game Developer.
           </Typography>
-        </Bounce>
+        </ScrollAnimation>
       </Box>
     </Box>
   );

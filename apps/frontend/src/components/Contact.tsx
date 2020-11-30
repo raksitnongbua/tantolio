@@ -1,6 +1,6 @@
 import { Box, Typography } from '@material-ui/core';
 import React from 'react';
-import { Rotate } from 'react-reveal';
+import ScrollAnimation from 'react-animate-on-scroll';
 const Contact = () => {
   return (
     <Box
@@ -9,7 +9,7 @@ const Contact = () => {
       flexDirection="column"
       justifyContent="center"
     >
-      <Rotate cascade>
+      <ScrollAnimation animateIn="flipInX" animateOut="flipOutX">
         <Box display="flex" my={1}>
           <Typography variant="h3" color="textPrimary">
             contact
@@ -27,7 +27,7 @@ const Contact = () => {
             tan.raksit@gmail.com
           </Typography>
         </Box>
-      </Rotate>
+      </ScrollAnimation>
     </Box>
   );
 };

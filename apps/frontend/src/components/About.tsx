@@ -1,6 +1,6 @@
 import { Box, Typography } from '@material-ui/core';
 import React from 'react';
-import { Fade } from 'react-reveal';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const About = () => {
   return (
@@ -10,7 +10,7 @@ const About = () => {
       flexDirection="column"
       justifyContent="center"
     >
-      <Fade bottom>
+      <ScrollAnimation animateIn="rotateIn" animateOut="fadeOut">
         <Box display="flex" my={1}>
           <Typography variant="h3" color="textPrimary">
             about
@@ -31,7 +31,7 @@ const About = () => {
             security and a family
           </Typography>
         </Box>
-      </Fade>
+      </ScrollAnimation>
     </Box>
   );
 };

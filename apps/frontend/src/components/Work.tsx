@@ -1,6 +1,6 @@
 import { Box, Typography } from '@material-ui/core';
 import React from 'react';
-import { Fade } from 'react-reveal';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const Work = () => {
   return (
@@ -10,7 +10,7 @@ const Work = () => {
       flexDirection="column"
       justifyContent="center"
     >
-      <Fade cascade right duration={1000}>
+      <ScrollAnimation animateIn="bounceIn" animateOut="bounceOut">
         <Box display="flex" my={1}>
           <Typography variant="h3" color="textPrimary">
             work
@@ -60,7 +60,7 @@ const Work = () => {
             Rangsit University 3.28 GPA
           </Typography>
         </Box>
-      </Fade>
+      </ScrollAnimation>
     </Box>
   );
 };
