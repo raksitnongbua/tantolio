@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/tantolio/static/js/main.d9711175.chunk.js",
-    "main.js.map": "/tantolio/static/js/main.d9711175.chunk.js.map",
-    "runtime-main.js": "/tantolio/static/js/runtime-main.cd3dab24.js",
-    "runtime-main.js.map": "/tantolio/static/js/runtime-main.cd3dab24.js.map",
-    "static/js/2.eba626d9.chunk.js": "/tantolio/static/js/2.eba626d9.chunk.js",
-    "static/js/2.eba626d9.chunk.js.map": "/tantolio/static/js/2.eba626d9.chunk.js.map",
-    "static/js/3.05950442.chunk.js": "/tantolio/static/js/3.05950442.chunk.js",
-    "static/js/3.05950442.chunk.js.map": "/tantolio/static/js/3.05950442.chunk.js.map",
+    "main.js": "/tantolio/static/js/main.fb014399.chunk.js",
+    "main.js.map": "/tantolio/static/js/main.fb014399.chunk.js.map",
+    "runtime-main.js": "/tantolio/static/js/runtime-main.0b288eab.js",
+    "runtime-main.js.map": "/tantolio/static/js/runtime-main.0b288eab.js.map",
+    "static/js/2.fb5b99bb.chunk.js": "/tantolio/static/js/2.fb5b99bb.chunk.js",
+    "static/js/2.fb5b99bb.chunk.js.map": "/tantolio/static/js/2.fb5b99bb.chunk.js.map",
+    "static/js/3.595cc142.chunk.js": "/tantolio/static/js/3.595cc142.chunk.js",
+    "static/js/3.595cc142.chunk.js.map": "/tantolio/static/js/3.595cc142.chunk.js.map",
     "index.html": "/tantolio/index.html",
-    "static/js/2.eba626d9.chunk.js.LICENSE.txt": "/tantolio/static/js/2.eba626d9.chunk.js.LICENSE.txt"
+    "static/js/2.fb5b99bb.chunk.js.LICENSE.txt": "/tantolio/static/js/2.fb5b99bb.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.cd3dab24.js",
-    "static/js/2.eba626d9.chunk.js",
-    "static/js/main.d9711175.chunk.js"
+    "static/js/runtime-main.0b288eab.js",
+    "static/js/2.fb5b99bb.chunk.js",
+    "static/js/main.fb014399.chunk.js"
   ]
 }
