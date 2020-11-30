@@ -1,7 +1,8 @@
 import React from 'react';
-import { Box, Button, IconButton, Theme } from '@material-ui/core';
+import { Box, IconButton, Theme } from '@material-ui/core';
 import Particles, { IParticlesParams } from 'react-particles-js';
 import { makeStyles } from '@material-ui/core/styles';
+import { Link } from 'react-scroll';
 
 const useStyles = makeStyles((theme: Theme) => ({
   button: {
@@ -19,9 +20,23 @@ const useStyles = makeStyles((theme: Theme) => ({
     width: '100%',
     height: '100%',
   },
+  link: {
+    alignSelf: 'center',
+    fontSize: '1.25rem',
+    cursor: 'pointer',
+    padding: theme.spacing(1),
+    transition: 'color .4s ease-out',
+    '&.active': {
+      color: theme.palette.primary.main,
+    },
+  },
 }));
-const Header = () => {
-  const { button, particles } = useStyles();
+interface IProps {
+  elementVisible: string;
+}
+const menus = ['is', 'work', 'about', 'contact'];
+const Header: React.FC<IProps> = ({ elementVisible }) => {
+  const { button, particles, link } = useStyles();
   const particlesParams: IParticlesParams = {
     particles: {
       number: {
@@ -75,19 +90,17 @@ const Header = () => {
         justifyContent="flex-end"
         p={1}
       >
-        <Button variant="text" className={button} disabled disableRipple>
-          .is()
-        </Button>
-        <Button variant="text" className={button} disableRipple>
-          .work()
-        </Button>
-        <Button variant="text" className={button} disableRipple>
-          .about()
-        </Button>
-        <Button variant="text" className={button} disableRipple>
-          .contact()
-        </Button>
-
+        {menus.map((key) => (
+          <Link
+            to={key}
+            className={link}
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
+            {`.${key}()`}
+          </Link>
+        ))}
         <IconButton
           disableRipple
           className={button}
