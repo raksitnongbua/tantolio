@@ -25,5 +25,10 @@ export const theme = createMuiTheme({
         backgroundColor: 'transparent',
       },
     },
+    MuiDrawer: {
+      paper: {
+        backgroundColor: 'transparent',
+      },
+    },
   },
 });

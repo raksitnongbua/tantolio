@@ -1,8 +1,9 @@
-import React from 'react';
-import { Box, IconButton, Theme } from '@material-ui/core';
+import React, { useState } from 'react';
+import { Box, Drawer, Hidden, IconButton, Theme } from '@material-ui/core';
 import Particles, { IParticlesParams } from 'react-particles-js';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-scroll';
+import { MoreVert } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme: Theme) => ({
   button: {
@@ -21,7 +22,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     height: '100%',
   },
   link: {
-    alignSelf: 'center',
+    alignSelf: 'flex-end',
     fontSize: '1.25rem',
     cursor: 'pointer',
     padding: theme.spacing(1),
@@ -35,8 +36,9 @@ interface IProps {
   elementVisible: string;
 }
 const menus = ['is', 'work', 'about', 'contact'];
-const Header: React.FC<IProps> = ({ elementVisible }) => {
+const Header: React.FC<IProps> = () => {
   const { button, particles, link } = useStyles();
+  const [drawerState, setDrawerState] = useState(false);
   const particlesParams: IParticlesParams = {
     particles: {
       number: {
@@ -83,40 +85,70 @@ const Header: React.FC<IProps> = ({ elementVisible }) => {
   return (
     <div>
       <Particles className={particles} params={particlesParams} />
+
       <Box
         position="fixed"
         width="100%"
         display="flex"
         justifyContent="flex-end"
         p={1}
+        zIndex={1}
       >
-        {menus.map((key) => (
-          <Link
-            key={`link-${key}`}
-            to={key}
-            className={link}
-            spy={true}
-            smooth={true}
-            duration={500}
+        <Hidden smUp>
+          {!drawerState && (
+            <IconButton className={button} onClick={() => setDrawerState(true)}>
+              <MoreVert />
+            </IconButton>
+          )}
+          <Drawer
+            anchor="right"
+            open={drawerState}
+            onClose={() => setDrawerState(false)}
           >
-            {`.${key}()`}
-          </Link>
-        ))}
-        <IconButton
-          disableRipple
-          className={button}
-          onClick={() =>
-            window.open(
-              'https://github.com/raksitnongbua/tantolio/tree/master/apps/frontend'
-            )
-          }
-        >
-          <img
-            alt="github"
-            src={`${process.env.PUBLIC_URL}/images/github-icon.png`}
-            style={{ width: '30px', height: '30px' }}
-          />
-        </IconButton>
+            {menus.map((key) => (
+              <Link
+                key={`link-${key}`}
+                to={key}
+                className={link}
+                spy={true}
+                smooth={true}
+                duration={500}
+                onClick={() => setDrawerState(false)}
+              >
+                {`.${key}()`}
+              </Link>
+            ))}
+          </Drawer>
+        </Hidden>
+        <Hidden xsDown>
+          {menus.map((key) => (
+            <Link
+              key={`link-${key}`}
+              to={key}
+              className={link}
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
+              {`.${key}()`}
+            </Link>
+          ))}
+          <IconButton
+            disableRipple
+            className={button}
+            onClick={() =>
+              window.open(
+                'https://github.com/raksitnongbua/tantolio/tree/master/apps/frontend'
+              )
+            }
+          >
+            <img
+              alt="github"
+              src={`${process.env.PUBLIC_URL}/images/github-icon.png`}
+              style={{ width: '30px', height: '30px' }}
+            />
+          </IconButton>
+        </Hidden>
       </Box>
     </div>
   );

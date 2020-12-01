@@ -10,7 +10,7 @@ const About = () => {
       flexDirection="column"
       justifyContent="center"
     >
-      <ScrollAnimation animateIn="rotateIn" animateOut="fadeOut">
+      <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
         <Box display="flex" my={1}>
           <Typography variant="h3" color="textPrimary">
             about

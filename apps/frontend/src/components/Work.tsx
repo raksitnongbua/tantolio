@@ -10,7 +10,7 @@ const Work = () => {
       flexDirection="column"
       justifyContent="center"
     >
-      <ScrollAnimation animateIn="bounceIn" animateOut="bounceOut">
+      <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
         <Box display="flex" my={1}>
           <Typography variant="h3" color="textPrimary">
             work
