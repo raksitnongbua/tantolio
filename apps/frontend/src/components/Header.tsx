@@ -16,10 +16,9 @@ const useStyles = makeStyles((theme: Theme) => ({
       color: theme.palette.primary.main,
     },
   },
-  particles: {
-    position: 'fixed',
-    width: '100%',
-    height: '100%',
+  githubButton: {
+    alignSelf: 'flex-end',
+    width: 'fit-content',
   },
   link: {
     alignSelf: 'flex-end',
@@ -31,15 +30,20 @@ const useStyles = makeStyles((theme: Theme) => ({
       color: theme.palette.primary.main,
     },
   },
+  particles: {
+    position: 'fixed',
+    width: '100%',
+    height: '100%',
+  },
 }));
 const menus = ['is', 'about', 'work', 'contact'];
 const Header = () => {
-  const { button, particles, link } = useStyles();
+  const { button, githubButton, particles, link } = useStyles();
   const [drawerState, setDrawerState] = useState(false);
   const particlesParams: IParticlesParams = {
     particles: {
       number: {
-        value: 75,
+        value: 70,
         density: {
           enable: true,
           value_area: 1500,
@@ -79,6 +83,40 @@ const Header = () => {
     },
     retina_detect: true,
   };
+  const handleClickGithub = () =>
+    window.open(
+      'https://github.com/raksitnongbua/tantolio/tree/master/apps/frontend'
+    );
+
+  const Menus = () => {
+    return (
+      <>
+        {menus.map((key) => (
+          <Link
+            key={`link-${key}`}
+            to={key}
+            className={link}
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
+            {`.${key}()`}
+          </Link>
+        ))}
+        <IconButton
+          disableRipple
+          className={githubButton}
+          onClick={handleClickGithub}
+        >
+          <img
+            alt="github"
+            src={`${process.env.PUBLIC_URL}/images/github-icon.png`}
+            style={{ width: '30px', height: '30px' }}
+          />
+        </IconButton>
+      </>
+    );
+  };
   return (
     <div>
       <Particles className={particles} params={particlesParams} />
@@ -102,49 +140,11 @@ const Header = () => {
             open={drawerState}
             onClose={() => setDrawerState(false)}
           >
-            {menus.map((key) => (
-              <Link
-                key={`link-${key}`}
-                to={key}
-                className={link}
-                spy={true}
-                smooth={true}
-                duration={500}
-                onClick={() => setDrawerState(false)}
-              >
-                {`.${key}()`}
-              </Link>
-            ))}
+            <Menus />
           </Drawer>
         </Hidden>
         <Hidden xsDown>
-          {menus.map((key) => (
-            <Link
-              key={`link-${key}`}
-              to={key}
-              className={link}
-              spy={true}
-              smooth={true}
-              duration={500}
-            >
-              {`.${key}()`}
-            </Link>
-          ))}
-          <IconButton
-            disableRipple
-            className={button}
-            onClick={() =>
-              window.open(
-                'https://github.com/raksitnongbua/tantolio/tree/master/apps/frontend'
-              )
-            }
-          >
-            <img
-              alt="github"
-              src={`${process.env.PUBLIC_URL}/images/github-icon.png`}
-              style={{ width: '30px', height: '30px' }}
-            />
-          </IconButton>
+          <Menus />
         </Hidden>
       </Box>
     </div>

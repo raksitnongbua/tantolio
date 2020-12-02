@@ -2,6 +2,8 @@ import { Box, Typography } from '@material-ui/core';
 import React from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
 
+const resumeDownloadLink =
+  'https://drive.google.com/file/d/1htIXwum3mSbtEL1mMlSicufU9xtEHn76/view?usp=sharing';
 const About = () => {
   return (
     <Box
@@ -33,10 +35,7 @@ const About = () => {
             good job which brings a stable income, have security and a family
           </Typography>
           <br />
-          <a
-            href="https://drive.google.com/file/d/1htIXwum3mSbtEL1mMlSicufU9xtEHn76/view?usp=sharing"
-            style={{ textDecoration: 'none' }}
-          >
+          <a href={resumeDownloadLink} style={{ textDecoration: 'none' }}>
             <Typography variant="body1" color="textSecondary">
               resume
               <Typography variant="body1" component="span" color="secondary">

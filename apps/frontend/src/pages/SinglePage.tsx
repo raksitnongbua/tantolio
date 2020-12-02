@@ -18,7 +18,7 @@ const Home = () => {
   const { line } = useStyles();
   return (
     <div>
-      <Header elementVisible={''} />
+      <Header />
       <Container maxWidth="lg">
         <Grid container>
           <Grid item xs={1}>
