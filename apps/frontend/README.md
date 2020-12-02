@@ -1,4 +1,3 @@
 # Tantolio
 
-[website](https://raksitnongbua.github.io/tantolio/)
-Using React typescript
+This [website](https://raksitnongbua.github.io/tantolio/) using React typescript
