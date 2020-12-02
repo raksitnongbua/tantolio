@@ -13,9 +13,9 @@ const Contact = () => {
         <Box display="flex" my={1}>
           <Typography variant="h3" color="textPrimary">
             contact
-          </Typography>
-          <Typography variant="h3" color="secondary">
-            .me()
+            <Typography variant="h3" color="secondary" component="span">
+              .me()
+            </Typography>
           </Typography>
         </Box>
         <Box my={1}>

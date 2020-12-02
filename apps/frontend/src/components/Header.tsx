@@ -32,17 +32,14 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
   },
 }));
-interface IProps {
-  elementVisible: string;
-}
-const menus = ['is', 'work', 'about', 'contact'];
-const Header: React.FC<IProps> = () => {
+const menus = ['is', 'about', 'work', 'contact'];
+const Header = () => {
   const { button, particles, link } = useStyles();
   const [drawerState, setDrawerState] = useState(false);
   const particlesParams: IParticlesParams = {
     particles: {
       number: {
-        value: 50,
+        value: 75,
         density: {
           enable: true,
           value_area: 1500,

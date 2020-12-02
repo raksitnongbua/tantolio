@@ -31,11 +31,11 @@ const Home = () => {
               <Element className="element" name="is">
                 <Is />
               </Element>
-              <Element className="element" name="work">
-                <Work />
-              </Element>
               <Element className="element" name="about">
                 <About />
+              </Element>
+              <Element className="element" name="work">
+                <Work />
               </Element>
               <Element className="element" name="contact">
                 <Contact />

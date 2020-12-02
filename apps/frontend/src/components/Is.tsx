@@ -15,9 +15,9 @@ const Is = () => {
           <Box display="flex">
             <Typography variant="h3" color="textPrimary">
               raksit
-            </Typography>
-            <Typography variant="h3" color="secondary">
-              .is()
+              <Typography variant="h3" color="secondary" component="span">
+                .is()
+              </Typography>
             </Typography>
           </Box>
           <Box my={1}>
