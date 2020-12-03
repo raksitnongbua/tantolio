@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { CssBaseline, MuiThemeProvider } from '@material-ui/core';
-import { theme } from './services/theme';
+import { theme } from './common/theme';
 
 ReactDOM.render(
   <MuiThemeProvider theme={theme}>
