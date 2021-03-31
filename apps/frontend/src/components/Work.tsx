@@ -9,26 +9,46 @@ const subHeaderColor = '#fff457';
 const Work = () => {
   return (
     <Box
-      minHeight="100vh"
-      display="flex"
-      flexDirection="column"
-      justifyContent="center"
+      minHeight='100vh'
+      display='flex'
+      flexDirection='column'
+      justifyContent='center'
     >
-      <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
-        <Box display="flex" my={1}>
-          <Typography variant="h3" color="textPrimary">
+      <ScrollAnimation animateIn='fadeIn' animateOut='fadeOut'>
+        <Box display='flex' my={1}>
+          <Typography variant='h3' color='textPrimary'>
             work
-            <Typography variant="h3" color="secondary" component="span">
+            <Typography variant='h3' color='secondary' component='span'>
               .exp()
             </Typography>
           </Typography>
         </Box>
-        <Typography variant="h6" color="textSecondary">
+        <Typography variant='h6' color='textSecondary'>
+          @Bitkub Online Co., Ltd.
+          <span style={{ color: commentColor }}>(2021-Present)</span>
+        </Typography>
+        <Box mt={1} mb={4}>
+          <Typography variant='body1' color='textSecondary'>
+            <span style={{ color: subHeaderColor }}>Front-End Developer </span>
+            <br />
+            Develop main web page of&nbsp;
+            <a
+              target='_blank'
+              rel='noopener noreferrer'
+              style={{ color: highlightColor }}
+              href='https://bitkub.com'
+            >
+              Bitkub
+            </a>
+            , It's mainly dev in the trading feature
+          </Typography>
+        </Box>
+        <Typography variant='h6' color='textSecondary'>
           @ProGaming Co., Ltd.
-          <span style={{ color: commentColor }}>(2016-Present)</span>
+          <span style={{ color: commentColor }}>(2016-2021)</span>
         </Typography>
         <Box my={1}>
-          <Typography variant="body1" color="textSecondary">
+          <Typography variant='body1' color='textSecondary'>
             <span style={{ color: subHeaderColor }}>Web Developer </span>
             <br />
             In some projects has commissioned develop only front-end or only
@@ -64,7 +84,7 @@ const Work = () => {
             &nbsp;and&nbsp;<span style={{ color: highlightColor }}>AWS</span>
           </Typography>
           <br />
-          <Typography variant="body1" color="textSecondary">
+          <Typography variant='body1' color='textSecondary'>
             <span style={{ color: subHeaderColor }}>Game Developer</span>
             <br />
             Develop an entire game system using Unity for IOS, Android, and PC
@@ -86,20 +106,20 @@ const Work = () => {
             </span>
             &nbsp;to store data
           </Typography>
-          <Typography variant="caption">
+          <Typography variant='caption'>
             <span style={{ color: commentColor }}>
               {'/* working on agile methodology */'}
             </span>
           </Typography>
         </Box>
         <Box my={2}>
-          <Typography variant="h6" color="textSecondary">
+          <Typography variant='h6' color='textSecondary'>
             Education <span style={{ color: commentColor }}>(2013-2016)</span>
           </Typography>
-          <Typography variant="body1" color="textSecondary">
+          <Typography variant='body1' color='textSecondary'>
             Computer Game Multimedia in Information Technology
           </Typography>
-          <Typography variant="subtitle1" color="textSecondary">
+          <Typography variant='subtitle1' color='textSecondary'>
             Rangsit University 3.28 GPA
           </Typography>
         </Box>
