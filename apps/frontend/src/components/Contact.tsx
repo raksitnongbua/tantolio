@@ -20,7 +20,7 @@ const Contact = () => {
         </Box>
         <Box my={1}>
           <Typography variant="body1" color="textSecondary">
-            180/3 Jaransanitwong 24 Banchanglor Bangkok noi, Bangkok
+            Jaransanitwong 24 Banchanglor Bangkok noi, Bangkok
             <br />
             090-970-8163
             <br />
